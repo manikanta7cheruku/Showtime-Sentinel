@@ -1,0 +1,53 @@
+# ---- Secrets & runtime data: MUST NEVER be committed ----
+.env
+.env.*
+!.env.example
+*.db
+*.db-wal
+*.db-shm
+*.sqlite
+*.sqlite3
+data/**
+!data/.gitkeep
+logs/
+*.log
+# Playwright / browser state
+.playwright/
+playwright-browsers/
+browser_data/
+*.har
+session*.json
+cookies*.json
+storage_state*.json
+# Screenshots/HTML dumps captured while debugging (may contain personal data)
+debug_dumps/
+
+# ---- Python ----
+__pycache__/
+*.py[cod]
+.venv/
+venv/
+env/
+*.egg-info/
+build/
+dist/
+.pytest_cache/
+.coverage
+htmlcov/
+.mypy_cache/
+.ruff_cache/
+
+# ---- Editors / OS ----
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db
+
+# Personal engineering notes - never publish
+docs/read.md
+
+# Local test artifacts
+.mypy_cache/
+.pytest_cache/
+.coverage
+htmlcov/
