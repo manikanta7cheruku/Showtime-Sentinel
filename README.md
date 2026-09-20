@@ -1,7 +1,7 @@
 # Movie Ticket Monitor
 
+[![Tests](https://github.com/manikanta7cheruku/Showtime-Sentinel/actions/workflows/tests.yml/badge.svg)](https://github.com/manikanta7cheruku/Showtime-Sentinel/actions/workflows/tests.yml)
 [![Python 3.11+](https://img.shields.io/badge/python-3.11+-blue.svg)](https://www.python.org/)
-[![Tests](https://img.shields.io/badge/tests-117%20passing-brightgreen.svg)]()
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 [![Code style: PEP8](https://img.shields.io/badge/code%20style-PEP8-black.svg)]()
 
@@ -12,18 +12,18 @@
 
 ## Highlights
 
-- **Pluggable source adapters** — `FakeMovieSource` for testing, `BookMyShowSource` for real use
+- **Pluggable source adapters** - `FakeMovieSource` for testing, `BookMyShowSource` for real use
 - **10-state availability machine** with explicit, testable transitions
-- **SHA-256 deterministic deduplication** — the same observation never notifies twice, even after restart
-- **Fail-closed Telegram authorisation** — empty allowlist denies all users
-- **117 passing tests, zero network calls** — the entire pipeline is provable offline
+- **SHA-256 deterministic deduplication** - the same observation never notifies twice, even after restart
+- **Fail-closed Telegram authorisation** - empty allowlist denies all users
+- **117 passing tests, zero network calls** - the entire pipeline is provable offline
 - **Playwright-powered browser automation** with API response interception, JS extraction, fuzzy movie/theatre matching
-- **Async I/O throughout** — one asyncio process, many watches, no overlap
-- **Exponential backoff with jitter** — respects rate limits and per-host throttling
-- **Graceful shutdown** — in-flight checks allowed to finish
-- **SQLite WAL mode** — restart-safe persistence with parameterised queries
-- **UTC internally, IST displayed** — clean timezone discipline
-- **Optional read-only localhost dashboard** — stdlib-only HTTP server
+- **Async I/O throughout** - one asyncio process, many watches, no overlap
+- **Exponential backoff with jitter** - respects rate limits and per-host throttling
+- **Graceful shutdown** - in-flight checks allowed to finish
+- **SQLite WAL mode** - restart-safe persistence with parameterised queries
+- **UTC internally, IST displayed** - clean timezone discipline
+- **Optional read-only localhost dashboard** - stdlib-only HTTP server
 
 ---
 
@@ -36,8 +36,8 @@
 ### Windows PowerShell
 
 ```powershell
-git clone https://github.com/<you>/<repo-name>.git
-cd <repo-name>
+git clone https://github.com/manikanta7cheruku/Showtime-Sentinel
+cd <Showtime-Sentinel>
 
 python -m venv venv
 .\venv\Scripts\Activate.ps1
@@ -53,8 +53,8 @@ pytest -v
 ### Linux / macOS
 
 ```bash
-git clone https://github.com/<you>/<repo-name>.git
-cd <repo-name>
+git clone https://github.com/manikanta7cheruku/Showtime-Sentinel
+cd <Showtime-Sentinel>
 
 python3 -m venv venv
 source venv/bin/activate
