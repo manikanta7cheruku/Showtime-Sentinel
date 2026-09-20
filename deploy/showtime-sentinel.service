@@ -1,0 +1,28 @@
+[Unit]
+Description=Showtime Sentinel - Movie Ticket Availability Monitor
+Documentation=https://github.com/manikanta7cheruku/Showtime-Sentinel
+After=network-online.target
+Wants=network-online.target
+
+[Service]
+Type=simple
+User=ubuntu
+Group=ubuntu
+WorkingDirectory=/home/ubuntu/showtime-sentinel
+Environment="PATH=/home/ubuntu/showtime-sentinel/venv/bin:/usr/local/bin:/usr/bin:/bin"
+Environment="PYTHONUNBUFFERED=1"
+ExecStart=/usr/bin/xvfb-run --server-args="-screen 0 1280x1024x24" /home/ubuntu/showtime-sentinel/venv/bin/python -m app.main run
+Restart=always
+RestartSec=10
+StandardOutput=journal
+StandardError=journal
+SyslogIdentifier=showtime-sentinel
+
+# Security hardening
+NoNewPrivileges=true
+PrivateTmp=true
+ProtectSystem=strict
+ReadWritePaths=/home/ubuntu/showtime-sentinel
+
+[Install]
+WantedBy=multi-user.target
