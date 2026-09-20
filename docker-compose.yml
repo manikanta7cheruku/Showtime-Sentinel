@@ -1,0 +1,11 @@
+# OPTIONAL. `docker compose up` is an alternative to the venv, never a requirement.
+services:
+  monitor:
+    build: .
+    env_file: .env          # never baked into the image
+    volumes:
+      - ./data:/app/data    # SQLite + logs live on your host
+    ports:
+      - "127.0.0.1:8765:8765"   # dashboard, localhost only
+    restart: unless-stopped
+    command: ["python", "-m", "app.main", "run", "--dashboard"]
